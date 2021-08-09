@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/libTextWhite"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+   >
+  <TextView
+      android:id="@+id/tv_num"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:text="20.00"
+      android:gravity="center"
+      android:layout_gravity="center"
+      android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="任务获得"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="2021-01-01"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+</layout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/lib_view"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/include"
+                layout="@layout/personcenter_head"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:text="分为法等多个付费通会封号发过火发过火废话废话返回发过火分红后发过火返回发过火"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/lib_edit"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
+

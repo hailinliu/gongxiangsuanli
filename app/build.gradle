@@ -1,0 +1,117 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "it.mbkj.suanli"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':lib')
+    api project(':homepage')
+    api project(':login')
+    api project(':personcenter')
+    api project(':xingqiu')
+    api project(':tradecenter')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.trello.rxlifecycle4:rxlifecycle:4.0.2'
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-android:4.0.2'
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-components:4.0.2'
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-components-preference:4.0.2'
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-android-lifecycle:4.0.2'
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-kotlin:4.0.2'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin:4.0.2'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //游戏试玩
+    //eventbus-3.1.1.jar也是游戏试玩需要的
+    implementation(name: 'leto-ad-gdt-4.330.1200-4.1.5', ext: 'aar')
+    implementation(name: 'leto-glide4.9-4.1.5', ext: 'aar')
+    implementation(name: 'leto-antiaddiction-4.1.5', ext: 'aar')
+    implementation(name: 'leto-core-base-4.1.8', ext: 'aar')
+    implementation(name: 'leto-core-4.1.5', ext: 'aar')
+    implementation(name: 'leto-mgc-4.1.8', ext: 'aar')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //sigmob
+    implementation(name: 'windAd-3.2.0', ext: 'aar')
+    implementation(name: 'oaid_sdk_1.0.25', ext: 'aar')
+    //快手
+    implementation(name: 'kssdk-all--3.3.18-publishRelease-30221f93b', ext: 'aar')
+    //广点通
+    implementation(name: 'GDTSDK.unionNormal.4.373.1243', ext: 'aar')
+    //穿山甲
+    implementation(name: 'open_ad_sdk_3.8.0.3', ext: 'aar')
+    //讯飞
+    implementation(name: 'IFLY_AD_4.5.4', ext: 'aar')
+    //万维
+    implementation(name: 'oneway-common-core-1.0.10', ext: 'aar')
+    //opendsp
+    implementation(name: 'opendsp_sdk1.6.0', ext: 'aar')
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //聚力
+    implementation(name: 'YmSdk20210429', ext: 'aar')
+
+    //任务墙
+    implementation(name: 'ibxsdk_2.1.4', ext: 'aar')
+//    implementation(name: 'ibxsdk_2.1.4_androidx', ext: 'aar')
+    implementation(name: 'ibxsdk_device_2.1.4', ext: 'aar')
+    implementation 'com.arialyy.aria:core:3.8.10'  //必须
+    annotationProcessor 'com.arialyy.aria:compiler:3.8.10' //必须
+    implementation "com.github.donkingliang:ImageSelector:1.9.2"
+
+    //微信阅读
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    //openset
+    implementation(name: 'openset_sdk4.6.1.2', ext: 'aar')
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-21'
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.android.support:recyclerview-v7:30.0.3'
+    implementation 'com.android.support:design:30.0.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.code.gson:gson:2.8.7'
+
+}

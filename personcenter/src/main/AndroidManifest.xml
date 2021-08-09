@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it.mbkj.personcenter" >
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application>
+
+        <activity android:name=".activity.ZichanXinXiActivity" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.UpdateDealPasswordActivity" />
+        <activity android:name=".activity.MyJiJiaActivity" />
+        <activity android:name=".activity.MyTeamActivity" />
+        <activity android:name=".activity.UpdateLoginActivity" />
+        <activity android:name=".activity.InviteFriendsActivity" />
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.AssetDetailActivity" />
+        <activity android:name=".activity.MyDatumActivity" />
+        <activity android:name=".activity.QianDaoActivity" />
+        <activity android:name=".activity.ShiMingActivity" />
+        <activity android:name=".activity.FaceActivity" />
+        <activity android:name=".activity.JiLiGuanggaoActivity" />
+        <activity android:name=".activity.QuanMinZhuanActivity" />
+    </application>
+</manifest>

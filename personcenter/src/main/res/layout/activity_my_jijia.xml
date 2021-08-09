@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/lib_view"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/include"
+            layout="@layout/personcenter_head"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="2dp"
+        android:layout_height="48dp">
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/commonTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            app:tl_indicator_color="@color/lib_tv_yixuan"
+            app:tl_indicator_height="1dp"
+            app:tl_indicator_width="100dp"
+            app:tl_textSelectColor="@color/lib_tv_yixuan"
+            app:tl_textUnselectColor="@color/appUnSelect"
+            app:tl_textsize="14sp"
+            />
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
+</layout>
